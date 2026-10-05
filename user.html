@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>User Dashboard - JobTrack</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="dashboard-body">
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            🚀 Job<span>Track</span>
+        </div>
+
+        <p class="menu-title">USER PANEL</p>
+
+        <a class="active">📊 Dashboard</a>
+        <a>💼 Browse Jobs</a>
+        <a>❤️ Saved Jobs</a>
+        <a>📋 My Applications</a>
+        <a>📅 Interviews</a>
+        <a>🔔 Notifications</a>
+
+        <button class="logout" onclick="logout()">
+            ↩ Logout
+        </button>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <h1>Hello, Mounika 👋</h1>
+                <p>Let's find your next opportunity.</p>
+            </div>
+
+            <div class="profile">
+
+                🔔
+
+                <div class="avatar">
+                    M
+                </div>
+
+                <b>User</b>
+
+            </div>
+
+        </header>
+
+        <!-- USER STATS -->
+
+        <section class="dashboard-cards">
+
+            <div class="stat-card purple">
+
+                <div>
+                    <p>Applications</p>
+                    <h2>18</h2>
+                    <small>Total applications</small>
+                </div>
+
+                <div class="big-icon">
+                    📋
+                </div>
+
+            </div>
+
+            <div class="stat-card orange">
+
+                <div>
+                    <p>Pending</p>
+                    <h2>7</h2>
+                    <small>Waiting for response</small>
+                </div>
+
+                <div class="big-icon">
+                    ⏳
+                </div>
+
+            </div>
+
+            <div class="stat-card blue">
+
+                <div>
+                    <p>Interviews</p>
+                    <h2>4</h2>
+                    <small>Upcoming interviews</small>
+                </div>
+
+                <div class="big-icon">
+                    🎤
+                </div>
+
+            </div>
+
+            <div class="stat-card green">
+
+                <div>
+                    <p>Selected</p>
+                    <h2>3</h2>
+                    <small>Successful applications</small>
+                </div>
+
+                <div class="big-icon">
+                    🎯
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- JOB LIST -->
+
+        <section class="panel">
+
+            <div class="panel-header">
+
+                <div>
+                    <h2>Recommended Jobs</h2>
+                    <p>Jobs matching your interests</p>
+                </div>
+
+                <input
+                    class="search"
+                    id="jobSearch"
+                    onkeyup="searchJobs()"
+                    placeholder="🔍 Search jobs...">
+
+            </div>
+
+            <div class="job-grid" id="jobGrid">
+
+                <div class="job-card">
+
+                    <div class="job-top">
+                        <div class="company-icon">G</div>
+
+                        <button
+                            class="heart"
+                            onclick="toggleHeart(this)">
+                            ♡
+                        </button>
+                    </div>
+
+                    <h3>Software Engineer</h3>
+
+                    <p class="company">
+                        Google
+                    </p>
+
+                    <p>
+                        📍 Bangalore &nbsp; • &nbsp;
+                        💰 ₹8-12 LPA
+                    </p>
+
+                    <div class="job-tags">
+                        <span>Java</span>
+                        <span>Python</span>
+                        <span>SQL</span>
+                    </div>
+
+                    <button
+                        class="apply-btn"
+                        onclick="applyJob(this)">
+                        Apply Now →
+                    </button>
+
+                </div>
+
+
+                <div class="job-card">
+
+                    <div class="job-top">
+                        <div class="company-icon">M</div>
+
+                        <button
+                            class="heart"
+                            onclick="toggleHeart(this)">
+                            ♡
+                        </button>
+                    </div>
+
+                    <h3>Frontend Developer</h3>
+
+                    <p class="company">
+                        Microsoft
+                    </p>
+
+                    <p>
+                        📍 Hyderabad &nbsp; • &nbsp;
+                        💰 ₹7-10 LPA
+                    </p>
+
+                    <div class="job-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <button
+                        class="apply-btn"
+                        onclick="applyJob(this)">
+                        Apply Now →
+                    </button>
+
+                </div>
+
+
+                <div class="job-card">
+
+                    <div class="job-top">
+                        <div class="company-icon">A</div>
+
+                        <button
+                            class="heart"
+                            onclick="toggleHeart(this)">
+                            ♡
+                        </button>
+                    </div>
+
+                    <h3>Web Developer</h3>
+
+                    <p class="company">
+                        Amazon
+                    </p>
+
+                    <p>
+                        📍 Chennai &nbsp; • &nbsp;
+                        💰 ₹6-9 LPA
+                    </p>
+
+                    <div class="job-tags">
+                        <span>React</span>
+                        <span>Node</span>
+                        <span>MongoDB</span>
+                    </div>
+
+                    <button
+                        class="apply-btn"
+                        onclick="applyJob(this)">
+                        Apply Now →
+                    </button>
+
+                </div>
+
+
+                <div class="job-card">
+
+                    <div class="job-top">
+
+                        <div class="company-icon">T</div>
+
+                        <button
+                            class="heart"
+                            onclick="toggleHeart(this)">
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <h3>Java Developer</h3>
+
+                    <p class="company">
+                        TCS
+                    </p>
+
+                    <p>
+                        📍 Pune &nbsp; • &nbsp;
+                        💰 ₹5-8 LPA
+                    </p>
+
+                    <div class="job-tags">
+                        <span>Java</span>
+                        <span>Spring</span>
+                        <span>MySQL</span>
+                    </div>
+
+                    <button
+                        class="apply-btn"
+                        onclick="applyJob(this)">
+                        Apply Now →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ORDER / APPLICATION STATUS -->
+
+        <section class="panel">
+
+            <div class="panel-header">
+                <h2>My Application Status</h2>
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Company</th>
+                        <th>Position</th>
+                        <th>Applied Date</th>
+                        <th>Status</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Google</td>
+                        <td>Software Engineer</td>
+                        <td>20 Sep 2026</td>
+                        <td>
+                            <span class="status interview">
+                                Interview
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Microsoft</td>
+                        <td>Frontend Developer</td>
+                        <td>18 Sep 2026</td>
+                        <td>
+                            <span class="status pending">
+                                Pending
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Amazon</td>
+                        <td>Web Developer</td>
+                        <td>15 Sep 2026</td>
+                        <td>
+                            <span class="status selected">
+                                Selected
+                            </span>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

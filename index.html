@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobTrack - Job Application Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="home">
+
+    <nav class="navbar">
+        <div class="logo">🚀 Job<span>Track</span></div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+            <button onclick="openLogin()">Login</button>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            <p class="tag">SMART JOB MANAGEMENT PLATFORM</p>
+
+            <h1>
+                Track Your
+                <span>Career Journey</span>
+                Smarter.
+            </h1>
+
+            <p>
+                Save job opportunities, manage applications,
+                track interview status and never miss a follow-up.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="primary-btn" onclick="openSignup()">
+                    Get Started →
+                </button>
+
+                <button class="secondary-btn" onclick="openLogin()">
+                    Login
+                </button>
+            </div>
+
+            <div class="stats">
+                <div>
+                    <h2>10K+</h2>
+                    <p>Applications</p>
+                </div>
+
+                <div>
+                    <h2>5K+</h2>
+                    <p>Users</p>
+                </div>
+
+                <div>
+                    <h2>2K+</h2>
+                    <p>Jobs Tracked</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-card">
+
+            <div class="floating-card card-one">
+                📩 Application Sent
+                <strong>Google - Software Engineer</strong>
+            </div>
+
+            <div class="dashboard-preview">
+
+                <div class="preview-top">
+                    <h3>My Applications</h3>
+                    <span>•••</span>
+                </div>
+
+                <div class="application">
+                    <div class="company-icon">G</div>
+                    <div>
+                        <b>Google</b>
+                        <small>Software Engineer</small>
+                    </div>
+                    <span class="status interview">Interview</span>
+                </div>
+
+                <div class="application">
+                    <div class="company-icon">M</div>
+                    <div>
+                        <b>Microsoft</b>
+                        <small>Frontend Developer</small>
+                    </div>
+                    <span class="status pending">Pending</span>
+                </div>
+
+                <div class="application">
+                    <div class="company-icon">A</div>
+                    <div>
+                        <b>Amazon</b>
+                        <small>Web Developer</small>
+                    </div>
+                    <span class="status selected">Selected</span>
+                </div>
+
+            </div>
+
+            <div class="floating-card card-two">
+                🎯 Interview Tomorrow
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="features" id="features">
+
+        <h2>Everything You Need</h2>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>Track Applications</h3>
+                <p>Keep all your job applications organized in one place.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📅</div>
+                <h3>Interview Reminders</h3>
+                <p>Never miss interviews and follow-up dates.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Progress Analytics</h3>
+                <p>Monitor application progress and success rates.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔔</div>
+                <h3>Smart Notifications</h3>
+                <p>Receive important updates about your applications.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- LOGIN MODAL -->
+
+    <div class="modal" id="loginModal">
+
+        <div class="modal-box">
+
+            <button class="close" onclick="closeModal()">×</button>
+
+            <h2>Welcome Back 👋</h2>
+            <p>Login to your JobTrack account</p>
+
+            <input type="email" placeholder="Email Address">
+
+            <input type="password" placeholder="Password">
+
+            <select id="loginRole">
+                <option value="user">User</option>
+                <option value="manager">Manager</option>
+                <option value="admin">Admin</option>
+            </select>
+
+            <button class="primary-btn full" onclick="login()">
+                Login →
+            </button>
+
+            <p class="switch">
+                Don't have an account?
+                <a onclick="switchSignup()">Sign Up</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- SIGNUP MODAL -->
+
+    <div class="modal" id="signupModal">
+
+        <div class="modal-box">
+
+            <button class="close" onclick="closeModal()">×</button>
+
+            <h2>Create Account 🚀</h2>
+            <p>Start managing your career today</p>
+
+            <input type="text" placeholder="Full Name">
+
+            <input type="email" placeholder="Email Address">
+
+            <input type="password" placeholder="Create Password">
+
+            <select>
+                <option>User</option>
+                <option>Manager</option>
+            </select>
+
+            <button class="primary-btn full" onclick="signup()">
+                Create Account
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

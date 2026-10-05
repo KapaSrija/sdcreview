@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Dashboard - JobTrack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-body">
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="logo">🚀 Job<span>Track</span></div>
+
+        <p class="menu-title">MANAGER PANEL</p>
+
+        <a class="active">📊 Dashboard</a>
+        <a>📦 Applications</a>
+        <a onclick="openJobModal()">➕ Add Job</a>
+        <a>👥 Candidates</a>
+        <a>📈 Reports</a>
+
+        <button class="logout" onclick="logout()">↩ Logout</button>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <h1>Manager Dashboard 🧑‍💼</h1>
+                <p>Manage job applications and opportunities.</p>
+            </div>
+
+            <div class="profile">
+                🔔
+                <div class="avatar">M</div>
+                <b>Manager</b>
+            </div>
+
+        </header>
+
+        <section class="dashboard-cards">
+
+            <div class="stat-card purple">
+                <div>
+                    <p>Total Applications</p>
+                    <h2>526</h2>
+                    <small>↑ 14%</small>
+                </div>
+                <div class="big-icon">📋</div>
+            </div>
+
+            <div class="stat-card orange">
+                <div>
+                    <p>Pending Review</p>
+                    <h2>84</h2>
+                    <small>Needs attention</small>
+                </div>
+                <div class="big-icon">⏳</div>
+            </div>
+
+            <div class="stat-card green">
+                <div>
+                    <p>Accepted</p>
+                    <h2>328</h2>
+                    <small>Applications accepted</small>
+                </div>
+                <div class="big-icon">✅</div>
+            </div>
+
+            <div class="stat-card blue">
+                <div>
+                    <p>Available Jobs</p>
+                    <h2 id="jobCount">24</h2>
+                    <small>Active postings</small>
+                </div>
+                <div class="big-icon">💼</div>
+            </div>
+
+        </section>
+
+        <section class="panel">
+
+            <div class="panel-header">
+
+                <h2>Application Requests</h2>
+
+                <button class="primary-btn" onclick="openJobModal()">
+                    + Add Job
+                </button>
+
+            </div>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Candidate</th>
+                        <th>Job</th>
+                        <th>Company</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="applicationTable">
+
+                    <tr>
+                        <td>Ravi</td>
+                        <td>Java Developer</td>
+                        <td>Infosys</td>
+                        <td>23 Sep</td>
+                        <td>
+                            <span class="status pending">Pending</span>
+                        </td>
+
+                        <td>
+                            <button class="accept"
+                                    onclick="acceptApplication(this)">
+                                Accept
+                            </button>
+
+                            <button class="reject"
+                                    onclick="rejectApplication(this)">
+                                Reject
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Sneha</td>
+                        <td>UI Developer</td>
+                        <td>TCS</td>
+                        <td>22 Sep</td>
+
+                        <td>
+                            <span class="status pending">Pending</span>
+                        </td>
+
+                        <td>
+                            <button class="accept"
+                                    onclick="acceptApplication(this)">
+                                Accept
+                            </button>
+
+                            <button class="reject"
+                                    onclick="rejectApplication(this)">
+                                Reject
+                            </button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- ADD JOB MODAL -->
+
+<div class="modal" id="jobModal">
+
+    <div class="modal-box">
+
+        <button class="close" onclick="closeJobModal()">×</button>
+
+        <h2>Add New Job 💼</h2>
+
+        <input id="jobTitle" placeholder="Job Title">
+
+        <input id="companyName" placeholder="Company Name">
+
+        <input id="location" placeholder="Location">
+
+        <input id="salary" placeholder="Salary">
+
+        <button class="primary-btn full" onclick="addJob()">
+            Add Job
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - JobTrack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-body">
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="logo">🚀 Job<span>Track</span></div>
+
+        <p class="menu-title">ADMIN PANEL</p>
+
+        <a class="active">📊 Dashboard</a>
+        <a>👥 Customers</a>
+        <a>📦 Active Orders</a>
+        <a>📜 Order History</a>
+        <a>📈 Analytics</a>
+        <a>⚙ Settings</a>
+
+        <button class="logout" onclick="logout()">↩ Logout</button>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Admin Dashboard 👑</h1>
+                <p>Monitor your platform activity.</p>
+            </div>
+
+            <div class="profile">
+                🔔
+                <div class="avatar">A</div>
+                <b>Admin</b>
+            </div>
+        </header>
+
+        <section class="dashboard-cards">
+
+            <div class="stat-card purple">
+                <div>
+                    <p>Total Customers</p>
+                    <h2>1,248</h2>
+                    <small>↑ 12% this month</small>
+                </div>
+                <div class="big-icon">👥</div>
+            </div>
+
+            <div class="stat-card blue">
+                <div>
+                    <p>Total Applications</p>
+                    <h2>3,642</h2>
+                    <small>↑ 18% this month</small>
+                </div>
+                <div class="big-icon">📋</div>
+            </div>
+
+            <div class="stat-card orange">
+                <div>
+                    <p>Active Orders</p>
+                    <h2>286</h2>
+                    <small>Currently processing</small>
+                </div>
+                <div class="big-icon">📦</div>
+            </div>
+
+            <div class="stat-card green">
+                <div>
+                    <p>Successful</p>
+                    <h2>842</h2>
+                    <small>Applications completed</small>
+                </div>
+                <div class="big-icon">🎯</div>
+            </div>
+
+        </section>
+
+        <section class="content-grid">
+
+            <div class="panel">
+
+                <div class="panel-header">
+                    <h2>Recent Applications</h2>
+                    <button>View All</button>
+                </div>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Applicant</th>
+                            <th>Company</th>
+                            <th>Position</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Rahul</td>
+                            <td>Google</td>
+                            <td>Software Engineer</td>
+                            <td><span class="status selected">Selected</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Priya</td>
+                            <td>Amazon</td>
+                            <td>Web Developer</td>
+                            <td><span class="status interview">Interview</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Arun</td>
+                            <td>Microsoft</td>
+                            <td>Frontend Developer</td>
+                            <td><span class="status pending">Pending</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Divya</td>
+                            <td>Infosys</td>
+                            <td>Java Developer</td>
+                            <td><span class="status rejected">Rejected</span></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div class="panel activity">
+
+                <h2>Recent Activity</h2>
+
+                <div class="activity-item">
+                    🟢
+                    <div>
+                        <b>New application</b>
+                        <p>Rahul applied for Google</p>
+                        <small>5 min ago</small>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    🔵
+                    <div>
+                        <b>Interview scheduled</b>
+                        <p>Priya - Amazon</p>
+                        <small>20 min ago</small>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    🟠
+                    <div>
+                        <b>Application pending</b>
+                        <p>Arun - Microsoft</p>
+                        <small>1 hour ago</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
